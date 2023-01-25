@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-   public class GetAllTypesQueryHandler : IRequestHandler<GetAllTypesQuery, List<TypesOutput>>
+   public class GetAllTypesQueryHandler : IRequestHandler<GetAllTypesQuery, APIResponse>
     {
         private readonly IUnitOfWork uow;
         private readonly IMapper _mapper;
@@ -25,14 +25,32 @@ namespace BLL.Services
             _mapper = mapper;
             _cache = cache;
         }
-        public async Task<List<TypesOutput>> Handle(GetAllTypesQuery request, CancellationToken cancellationToken)
+        public async Task<APIResponse> Handle(GetAllTypesQuery request, CancellationToken cancellationToken)
         {
-            string Key = $"member-allTypesAll";
-            return await _cache.GetOrCreateAsync(Key, entry => {
-                entry.SetAbsoluteExpiration(
-                    TimeSpan.FromMinutes(2));
-                return this.GetAll(request);
-            });
+            try
+            {
+                string Key = $"member-allTypesAll";
+                var Result = await _cache.GetOrCreateAsync(Key, entry => {
+                    entry.SetAbsoluteExpiration(
+                        TimeSpan.FromMinutes(2));
+                    return this.GetAll(request);
+                });
+                return new APIResponse
+                {
+                    IsError = true,
+                    Code = 200,
+                    Message = "",
+                    Data = Result
+                };
+            }
+            catch (Exception ex)
+            {
+                return new APIResponse
+                {
+                    IsError = true,
+                    Message = ex.Message,
+                };
+            }
         }
         public async Task<List<TypesOutput>> GetAll(GetAllTypesQuery request)
         {

@@ -11,13 +11,14 @@ namespace CORE.DTO
 {
     public class BooksInput
     {
+        public int? Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
         public int PageCount { get; set; }
         [Required]
         public IFormFile Image_file { get; set; }
-        [Required]
+      
         public Point Point { get; set; }
         [Required]
         public int? authorid { get; set; }

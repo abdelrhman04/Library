@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class UpdateTypesCommand : IRequest<TypesOutput>
+    public class UpdateTypesCommand : IRequest<APIResponse>
     {
         public TypesInput Type { get; set; }
     }

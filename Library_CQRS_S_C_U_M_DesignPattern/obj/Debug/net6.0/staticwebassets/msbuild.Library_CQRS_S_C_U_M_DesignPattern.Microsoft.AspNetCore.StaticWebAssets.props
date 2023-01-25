@@ -1,5 +1,85 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\0ebb2cb4-34f5-4497-a3a5-7b33ad21bd0edcdwced.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/0ebb2cb4-34f5-4497-a3a5-7b33ad21bd0edcdwced.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\0ebb2cb4-34f5-4497-a3a5-7b33ad21bd0edcdwced.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\257d0ba4-7dc3-4942-84be-5be7769e8465ddddd.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/257d0ba4-7dc3-4942-84be-5be7769e8465ddddd.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\257d0ba4-7dc3-4942-84be-5be7769e8465ddddd.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\451ad8e7-12e7-4a9c-8012-727b5e487d78d d ds ds d.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/451ad8e7-12e7-4a9c-8012-727b5e487d78d d ds ds d.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\451ad8e7-12e7-4a9c-8012-727b5e487d78d d ds ds d.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\46287fc0-329d-4b07-a676-41937f168f01dcdwced.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/46287fc0-329d-4b07-a676-41937f168f01dcdwced.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\46287fc0-329d-4b07-a676-41937f168f01dcdwced.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\63c00fd5-82ff-4bb7-a05f-9eba6ac90bfedcdwced.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/63c00fd5-82ff-4bb7-a05f-9eba6ac90bfedcdwced.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\63c00fd5-82ff-4bb7-a05f-9eba6ac90bfedcdwced.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\687668fe-9d57-4684-8fa3-ddef03be9e25paper2.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
@@ -15,6 +95,54 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\687668fe-9d57-4684-8fa3-ddef03be9e25paper2.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\870250a6-a9bc-4cb3-8055-1204cfe8dc44d d ds ds d.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/870250a6-a9bc-4cb3-8055-1204cfe8dc44d d ds ds d.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\870250a6-a9bc-4cb3-8055-1204cfe8dc44d d ds ds d.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\c5885147-8433-4f2a-ab49-76908015c8e5dcdwced.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/c5885147-8433-4f2a-ab49-76908015c8e5dcdwced.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\c5885147-8433-4f2a-ab49-76908015c8e5dcdwced.PNG))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\e5b3d15b-ada2-429b-ac12-4a9b4ca8a428dcdwced.PNG))">
+      <SourceType>Package</SourceType>
+      <SourceId>Library_CQRS_S_C_U_M_DesignPattern</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Library_CQRS_S_C_U_M_DesignPattern</BasePath>
+      <RelativePath>Image/e5b3d15b-ada2-429b-ac12-4a9b4ca8a428dcdwced.PNG</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\e5b3d15b-ada2-429b-ac12-4a9b4ca8a428dcdwced.PNG))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

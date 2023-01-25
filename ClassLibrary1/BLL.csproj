@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Books\Commands\DeleteBooks\" />
-    <Folder Include="Services\Books\Commands\UpdateBooks\" />
-    <Folder Include="Services\Books\Query\GetAllBooks\" />
-    <Folder Include="Services\Books\Query\GetByIdBooks\" />
     <Folder Include="Services\Brorows\Commands\AddBrorows\" />
     <Folder Include="Services\Brorows\Commands\DeleteBrorows\" />
     <Folder Include="Services\Brorows\Commands\UpdateBrorows\" />

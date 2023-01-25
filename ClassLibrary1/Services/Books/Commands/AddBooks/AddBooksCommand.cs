@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class AddBooksCommand : IRequest<BooksOutput>
+    public class AddBooksCommand : IRequest<APIResponse>
     {
         public BooksInput Book { get; set; }
     }

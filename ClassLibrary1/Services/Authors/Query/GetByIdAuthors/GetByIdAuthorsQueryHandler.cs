@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class GetByIdAuthorsQueryHandler : IRequestHandler<GetByIdAuthorsQuery, AuthorOutput>
+    public class GetByIdAuthorsQueryHandler : IRequestHandler<GetByIdAuthorsQuery, APIResponse>
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
@@ -23,15 +23,32 @@ namespace BLL.Services
             _mapper = mapper;
             _cache = cache;
         }
-        public async Task<AuthorOutput> Handle(GetByIdAuthorsQuery request, CancellationToken cancellationToken)
+        public async Task<APIResponse> Handle(GetByIdAuthorsQuery request, CancellationToken cancellationToken)
         {
-
-            string Key = $"member-{request.Id}";
-            return await _cache.GetOrCreateAsync(Key, entry => {
+            try
+            {
+                string Key = $"member-{request.Id}";
+                var Result = await _cache.GetOrCreateAsync(Key, entry => {
                 entry.SetAbsoluteExpiration(
                     TimeSpan.FromMinutes(2));
                 return  this.GetID(request);
-            });
+                }); 
+                return new APIResponse
+                {
+                IsError = true,
+                Code = 200,
+                Message = "",
+                Data = Result
+            };
+            }
+            catch (Exception ex)
+            {
+                return new APIResponse
+                {
+                    IsError = true,
+                    Message = ex.Message,
+                };
+            }
             //
         }
         public async Task<AuthorOutput> GetID(GetByIdAuthorsQuery request)

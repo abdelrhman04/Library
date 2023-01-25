@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class GetByIdTypesQuery : IRequest<TypesOutput>
+    public class GetByIdTypesQuery : IRequest<APIResponse>
     {
         public int Id { get; set; }
     }

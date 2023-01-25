@@ -9,6 +9,7 @@ namespace CORE.DTO
 {
     public class BooksOutput
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int PageCount { get; set; }
         public string Image_Path { get; set; }

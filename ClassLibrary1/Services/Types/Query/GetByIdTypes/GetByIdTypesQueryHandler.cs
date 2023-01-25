@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class GetByIdTypesQueryHandler : IRequestHandler<GetByIdTypesQuery, TypesOutput>
+    public class GetByIdTypesQueryHandler : IRequestHandler<GetByIdTypesQuery, APIResponse>
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
@@ -24,15 +24,32 @@ namespace BLL.Services
             _mapper = mapper;
             _cache = cache;
         }
-        public async Task<TypesOutput> Handle(GetByIdTypesQuery request, CancellationToken cancellationToken)
+        public async Task<APIResponse> Handle(GetByIdTypesQuery request, CancellationToken cancellationToken)
         {
-
-            string Key = $"member-Type{request.Id}";
-            return await _cache.GetOrCreateAsync(Key, entry => {
+            try
+            {
+                string Key = $"member-Type{request.Id}";
+                var Result = await _cache.GetOrCreateAsync(Key, entry => {
                 entry.SetAbsoluteExpiration(
                     TimeSpan.FromMinutes(2));
                 return this.GetID(request);
-            });
+                });
+                return new APIResponse
+                {
+                    IsError = true,
+                    Code = 200,
+                    Message = "",
+                    Data = Result
+                };
+            }
+            catch (Exception ex)
+            {
+                return new APIResponse
+                {
+                    IsError = true,
+                    Message = ex.Message,
+                };
+            }
             //
         }
         public async Task<TypesOutput> GetID(GetByIdTypesQuery request)

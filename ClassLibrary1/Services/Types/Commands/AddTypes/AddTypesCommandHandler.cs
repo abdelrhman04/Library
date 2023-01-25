@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class AddTypesCommandHandler : IRequestHandler<AddTypesCommand, TypesOutput>
+    public class AddTypesCommandHandler : IRequestHandler<AddTypesCommand, APIResponse>
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly IMapper mapper;
@@ -23,14 +23,31 @@ namespace BLL.Services
             mapper = _mapper;
             _cache = cache;
         }
-        public async Task<TypesOutput> Handle(AddTypesCommand request, CancellationToken cancellationToken)
+        public async Task<APIResponse> Handle(AddTypesCommand request, CancellationToken cancellationToken)
         {
-            string Key = $"member-allTypesAll";
-            
-            Types post = mapper.Map<Types>(request.Type);
-            post = await unitOfWork.Types.AddAsync(post);
-            _cache.Remove(Key);
-            return mapper.Map<TypesOutput>(post);
+            try
+            {
+                string Key = $"member-allTypesAll";
+
+                Types post = mapper.Map<Types>(request.Type);
+                post = await unitOfWork.Types.AddAsync(post);
+                _cache.Remove(Key);
+                return new APIResponse
+                {
+                    IsError = false,
+                    Code = 200,
+                    Message = "",
+                    Data = mapper.Map<TypesOutput>(post),
+                };
+            }
+            catch (Exception ex)
+            {
+                return new APIResponse
+                {
+                    IsError = true,
+                    Message = ex.Message,
+                };
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class GetAllTypesQuery : IRequest<List<TypesOutput>>
+    public class GetAllTypesQuery : IRequest<APIResponse>
     {
     }
 }

@@ -20,8 +20,17 @@ namespace BLL.Services
         public async Task<APIResponse> Handle(DeleteAuthorCommands request, CancellationToken cancellationToken)
         {
             try {
-                string Key = $"member-allTypesAll";
+                string Key = $"member-AuthorAll";
                 var DeleteItem = await uow.Authors.GetByIdAsync(x => x.Id == request.Id);
+                if (DeleteItem == null)
+                {
+                    return new APIResponse
+                    {
+                        IsError = false,
+                        Code = 404,
+                        Message = "Element Not Found"
+                    };
+                }
                 await uow.Authors.DeleteAsync(DeleteItem);
                 _cache.Remove(Key);
                 return new APIResponse
