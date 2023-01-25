@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class UpdateAuthorCommands : IRequest<AuthorOutput>
+    public class UpdateAuthorCommands : IRequest<APIResponse>
     {
         public AuthorInput Author { get; set; }
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class GetAllAuthorsQuery : IRequest<List<AuthorOutput>>
+    public class GetAllAuthorsQuery : IRequest<APIResponse>
     {
     }
 }

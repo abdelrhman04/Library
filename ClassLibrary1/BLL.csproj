@@ -30,7 +30,6 @@
     <Folder Include="Services\Students\Commands\UpdateStudents\" />
     <Folder Include="Services\Students\Query\GetAllStudents\" />
     <Folder Include="Services\Students\Query\GetByIdStudents\" />
-    <Folder Include="Shared\" />
   </ItemGroup>
 
   <ItemGroup>

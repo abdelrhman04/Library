@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,19 +8,38 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class DeleteAuthorCommandsHandler : IRequestHandler<DeleteAuthorCommands>
+    public class DeleteAuthorCommandsHandler : IRequestHandler<DeleteAuthorCommands, APIResponse>
     {
         private readonly IUnitOfWork uow;
-        public DeleteAuthorCommandsHandler(IUnitOfWork _uow)
+        private readonly IMemoryCache _cache;
+        public DeleteAuthorCommandsHandler(IUnitOfWork _uow, IMemoryCache cache)
         {
             uow = _uow;
+            _cache = cache;
         }
-        public async Task<Unit> Handle(DeleteAuthorCommands request, CancellationToken cancellationToken)
+        public async Task<APIResponse> Handle(DeleteAuthorCommands request, CancellationToken cancellationToken)
         {
-            var DeleteItem = await uow.Authors.GetByIdAsync(x => x.Id == request.Id);
-            await uow.Authors.DeleteAsync(DeleteItem);
-            return Unit.Value;
-        }
+            try {
+                string Key = $"member-allTypesAll";
+                var DeleteItem = await uow.Authors.GetByIdAsync(x => x.Id == request.Id);
+                await uow.Authors.DeleteAsync(DeleteItem);
+                _cache.Remove(Key);
+                return new APIResponse
+                {
+                    IsError= true,
+                    Code=200,
+                    Message="Element Deleted"
+                };
+            }
+            catch(Exception ex)
+            {
+              return new APIResponse
+              {
+                IsError = true,
+                Message = ex.Message,
+              };
+            }
+         }
     }
     
     

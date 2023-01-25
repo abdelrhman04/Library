@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class DeleteAuthorCommands : IRequest
+    public class DeleteAuthorCommands : IRequest<APIResponse>
     {
 
         public int Id { get; set; }
