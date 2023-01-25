@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CORE\CORE.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\Books\Commands\DeleteBooks\" />
+    <Folder Include="Services\Books\Commands\UpdateBooks\" />
+    <Folder Include="Services\Books\Query\GetAllBooks\" />
+    <Folder Include="Services\Books\Query\GetByIdBooks\" />
+    <Folder Include="Services\Brorows\Commands\AddBrorows\" />
+    <Folder Include="Services\Brorows\Commands\DeleteBrorows\" />
+    <Folder Include="Services\Brorows\Commands\UpdateBrorows\" />
+    <Folder Include="Services\Brorows\Query\GetAllBrorows\" />
+    <Folder Include="Services\Brorows\Query\GetByIdBrorows\" />
+    <Folder Include="Services\Roles\Commands\AddRoles\" />
+    <Folder Include="Services\Roles\Commands\DeleteRoles\" />
+    <Folder Include="Services\Roles\Commands\UpdateRoles\" />
+    <Folder Include="Services\Roles\Query\GetAllRoles\" />
+    <Folder Include="Services\Roles\Query\GetByIdRoles\" />
+    <Folder Include="Services\Students\Commands\AddStudents\" />
+    <Folder Include="Services\Students\Commands\DeleteStudents\" />
+    <Folder Include="Services\Students\Commands\UpdateStudents\" />
+    <Folder Include="Services\Students\Query\GetAllStudents\" />
+    <Folder Include="Services\Students\Query\GetByIdStudents\" />
+    <Folder Include="Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+</Project>

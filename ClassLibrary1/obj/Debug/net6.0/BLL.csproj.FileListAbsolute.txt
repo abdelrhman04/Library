@@ -1,0 +1,15 @@
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\bin\Debug\net6.0\BLL.deps.json
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\bin\Debug\net6.0\BLL.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\bin\Debug\net6.0\BLL.pdb
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\bin\Debug\net6.0\CORE.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\bin\Debug\net6.0\CORE.pdb
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.csproj.CopyComplete
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\refint\BLL.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\BLL.pdb
+D:\Abdo_Project_For_Tech\ClassLibrary1\ClassLibrary1\obj\Debug\net6.0\ref\BLL.dll

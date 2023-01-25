@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "lw18H1NP9zbu2Zv/349iZj47LyZAaBoqSJMzpDdVR8o=",
+  "Source": "Library_CQRS_S_C_U_M_DesignPattern",
+  "BasePath": "_content/Library_CQRS_S_C_U_M_DesignPattern",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Library_CQRS_S_C_U_M_DesignPattern\\wwwroot",
+      "Source": "Library_CQRS_S_C_U_M_DesignPattern",
+      "ContentRoot": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\",
+      "BasePath": "_content/Library_CQRS_S_C_U_M_DesignPattern",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\Image\\687668fe-9d57-4684-8fa3-ddef03be9e25paper2.jpg",
+      "SourceId": "Library_CQRS_S_C_U_M_DesignPattern",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\",
+      "BasePath": "_content/Library_CQRS_S_C_U_M_DesignPattern",
+      "RelativePath": "Image/687668fe-9d57-4684-8fa3-ddef03be9e25paper2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\687668fe-9d57-4684-8fa3-ddef03be9e25paper2.jpg"
+    }
+  ]
+}

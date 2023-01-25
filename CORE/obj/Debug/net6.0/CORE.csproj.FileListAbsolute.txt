@@ -1,0 +1,14 @@
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\bin\Debug\net6.0\CORE.deps.json
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\bin\Debug\net6.0\CORE.runtimeconfig.json
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\bin\Debug\net6.0\CORE.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\bin\Debug\net6.0\CORE.pdb
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.csproj.AssemblyReference.cache
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.GeneratedMSBuildEditorConfig.editorconfig
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.AssemblyInfoInputs.cache
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.AssemblyInfo.cs
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.csproj.CoreCompileInputs.cache
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\refint\CORE.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.pdb
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\CORE.genruntimeconfig.cache
+D:\Abdo_Project_For_Tech\ClassLibrary1\CORE\obj\Debug\net6.0\ref\CORE.dll

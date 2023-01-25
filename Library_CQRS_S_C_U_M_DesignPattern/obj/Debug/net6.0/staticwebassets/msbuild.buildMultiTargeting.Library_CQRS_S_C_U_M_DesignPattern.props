@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Library_CQRS_S_C_U_M_DesignPattern.props" />
+</Project>

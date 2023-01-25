@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\Image\\687668fe-9d57-4684-8fa3-ddef03be9e25paper2.jpg",
+      "PackagePath": "staticwebassets\\Image\\687668fe-9d57-4684-8fa3-ddef03be9e25paper2.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Library_CQRS_S_C_U_M_DesignPattern.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Library_CQRS_S_C_U_M_DesignPattern.props",
+      "PackagePath": "build\\Library_CQRS_S_C_U_M_DesignPattern.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Library_CQRS_S_C_U_M_DesignPattern.props",
+      "PackagePath": "buildMultiTargeting\\Library_CQRS_S_C_U_M_DesignPattern.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Library_CQRS_S_C_U_M_DesignPattern.props",
+      "PackagePath": "buildTransitive\\Library_CQRS_S_C_U_M_DesignPattern.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
