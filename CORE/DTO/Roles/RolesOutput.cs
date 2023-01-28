@@ -8,6 +8,7 @@ namespace CORE.DTO
 {
     public class RolesOutput
     {
+        public string Id { get; set; }
         public string Name { get; set; }
     }
 }

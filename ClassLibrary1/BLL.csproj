@@ -16,11 +16,6 @@
     <Folder Include="Services\Brorows\Commands\UpdateBrorows\" />
     <Folder Include="Services\Brorows\Query\GetAllBrorows\" />
     <Folder Include="Services\Brorows\Query\GetByIdBrorows\" />
-    <Folder Include="Services\Roles\Commands\AddRoles\" />
-    <Folder Include="Services\Roles\Commands\DeleteRoles\" />
-    <Folder Include="Services\Roles\Commands\UpdateRoles\" />
-    <Folder Include="Services\Roles\Query\GetAllRoles\" />
-    <Folder Include="Services\Roles\Query\GetByIdRoles\" />
     <Folder Include="Services\Students\Commands\AddStudents\" />
     <Folder Include="Services\Students\Commands\DeleteStudents\" />
     <Folder Include="Services\Students\Commands\UpdateStudents\" />

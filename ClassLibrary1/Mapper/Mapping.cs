@@ -2,6 +2,7 @@
 using CORE.DAL;
 using CORE.DTO;
 using CORE.DTO.Authors;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,12 @@ namespace BLL
 
             CreateMap<Books, BooksInput>().ReverseMap();
             CreateMap<BooksOutput, Books>().ReverseMap(); 
+
             CreateMap<Types, TypesInput>().ReverseMap();
-            CreateMap<TypesOutput, Types>().ReverseMap();
+            CreateMap<TypesOutput, Types>().ReverseMap(); 
+
+            CreateMap<IdentityRole, RolesInput>().ReverseMap();
+            CreateMap<RolesOutput, IdentityRole>().ReverseMap();
         }
     }
 }
