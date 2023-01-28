@@ -75,3 +75,6 @@ D:\Abdo_Project_For_Tech\ClassLibrary1\Library_CQRS_S_C_U_M_DesignPattern\bin\De
 D:\Abdo_Project_For_Tech\ClassLibrary1\Library_CQRS_S_C_U_M_DesignPattern\bin\Debug\net6.0\Library_CQRS_S_C_U_M_DesignPattern.staticwebassets.runtime.json
 D:\Abdo_Project_For_Tech\ClassLibrary1\Library_CQRS_S_C_U_M_DesignPattern\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Abdo_Project_For_Tech\ClassLibrary1\Library_CQRS_S_C_U_M_DesignPattern\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\Library_CQRS_S_C_U_M_DesignPattern\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\Library_CQRS_S_C_U_M_DesignPattern\bin\Debug\net6.0\SendGrid.dll
+D:\Abdo_Project_For_Tech\ClassLibrary1\Library_CQRS_S_C_U_M_DesignPattern\bin\Debug\net6.0\StarkbankEcdsa.dll

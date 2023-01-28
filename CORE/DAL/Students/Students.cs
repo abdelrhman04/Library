@@ -15,11 +15,13 @@ namespace CORE.DAL
            // BirthDate= DateTime.Now;
         }
         public string Name { get; set; }
+        public string EmailVerifyToken { get; set; }
+        public string PassResetToken { get; set; } = "";
         public string SurName { get; set; }
         public Gender gender { get; set; }
         public DateTime BirthDate { get;  set; }
         public Class Class { get; set; }
-        public Point Point { get; set; }
+        public Point point { get; set; }
         public ICollection<Brorows> Brorows { get; set; }
 
 

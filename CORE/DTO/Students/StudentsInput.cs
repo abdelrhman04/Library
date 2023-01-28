@@ -10,6 +10,10 @@ namespace CORE.DTO
 {
     public class StudentsInput
     {
+        public string? Id { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
@@ -20,5 +24,6 @@ namespace CORE.DTO
         public DateTime BirthDate { get; set; }
         [Required]
         public Class Class { get; set; }
+        public Point point { get; set; }
     }
 }

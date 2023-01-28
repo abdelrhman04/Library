@@ -26,6 +26,9 @@ namespace BLL
 
             CreateMap<IdentityRole, RolesInput>().ReverseMap();
             CreateMap<RolesOutput, IdentityRole>().ReverseMap();
+
+            CreateMap<Students, StudentsInput>().ReverseMap();
+            CreateMap<StudentsOutput, Students>().ReverseMap();
         }
     }
 }

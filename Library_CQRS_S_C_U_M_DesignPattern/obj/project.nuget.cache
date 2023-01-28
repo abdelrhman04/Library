@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Hjy7u28pVQGnteGK8zq2s94koheFeFsmK+mbSLGAupBGULIfiLT2HaANFs4nVIFl1og9sS9dfvDj/VytvSTcrg==",
+  "dgSpecHash": "w3V0FCKdlkvH6b6M7ODlCHTQjL4HcM8/AqVMY2k3hCRdidtgP5GRYiybyT3VJVnBEG0Y7EvTus9zJq8+BAHBxA==",
   "success": true,
   "projectFilePath": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\Library_CQRS_S_C_U_M_DesignPattern.csproj",
   "expectedPackageFiles": [
@@ -65,6 +65,9 @@
     "C:\\Users\\Misk ITs\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Misk ITs\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Misk ITs\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Misk ITs\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Misk ITs\\.nuget\\packages\\sendgrid\\9.28.1\\sendgrid.9.28.1.nupkg.sha512",
+    "C:\\Users\\Misk ITs\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\Misk ITs\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Misk ITs\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Misk ITs\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
