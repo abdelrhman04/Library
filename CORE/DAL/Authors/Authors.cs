@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CORE.DAL
 {
-    public class Authors :BaseEntity
+    public class Authors : BaseEntity
     {
         public string Name { get; set; }
         public string SurName { get; set; }

@@ -9,6 +9,7 @@ namespace CORE.DTO
 {
     public class BrorowsInput
     {
+        public int Id { get; set; } = 0;
         [Required]
         public string StudentId { get; set; }
         [Required]

@@ -29,6 +29,9 @@ namespace BLL
 
             CreateMap<Students, StudentsInput>().ReverseMap();
             CreateMap<StudentsOutput, Students>().ReverseMap();
+
+            CreateMap<Brorows, BrorowsInput>().ReverseMap();
+            CreateMap<BrorowsOutput, Brorows>().ReverseMap();
         }
     }
 }

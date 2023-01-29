@@ -11,7 +11,7 @@ namespace CORE.DTO
 {
     public class BooksInput
     {
-        public int? Id { get; set; }
+        public int? Id { get; set; } = 0;
         [Required]
         public string Name { get; set; }
         [Required]

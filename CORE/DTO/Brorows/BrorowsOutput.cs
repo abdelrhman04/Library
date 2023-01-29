@@ -8,6 +8,7 @@ namespace CORE.DTO
 {
     public class BrorowsOutput
     {
+        public int Id { get; set; }
         public string StudentId { get; set; }
         public DateTime TakenDate { get; set; }
         public DateTime BroughDate { get; set; }
