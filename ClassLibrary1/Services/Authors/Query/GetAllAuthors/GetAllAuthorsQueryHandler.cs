@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BLL.Specifications;
+using CORE.DAL;
 using CORE.DTO.Authors;
 using MediatR;
 using Microsoft.Extensions.Caching.Memory;
@@ -48,7 +49,7 @@ namespace BLL.Services
         }
         public async Task<List<AuthorOutput>> GetAll(GetAllAuthorsQuery request)
         {
-            AuthorSpecification Author = new AuthorSpecification();
+            AuthorSpecification<Authors> Author = new AuthorSpecification<Authors>(null, x => x.SurName, x=>x.Books);
 
             var allPosts = await uow.Authors.GetAllAsync(Author);
             return _mapper.Map < List<AuthorOutput>>(allPosts);

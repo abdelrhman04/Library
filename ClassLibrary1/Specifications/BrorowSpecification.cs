@@ -13,7 +13,7 @@ namespace BLL.Specifications
         {
 
         }
-        public BrorowSpecification(int id) : base(x => x.Id == id)
+        public BrorowSpecification(int id,string Student_id) : base(x => x.Id == id&& x.StudentId== Student_id)
         {
 
         }

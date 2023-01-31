@@ -31,8 +31,10 @@ namespace BLL.Services
             {
                 string Key = $"member - allBookAll";
                 string Key2 = $"member-Book{request.Books.Id}";
+                var image_name = await unitOfWork.Books.GetByIdAsync(x => x.Id == request.Books.Id);
+
                 Books post = mapper.Map<Books>(request.Books);
-                post.Image = Upload(request.Books.Image_file, post.Image_Path);
+                post.Image = Upload(request.Books.Image_file,path: image_name.Image);
                 post = await unitOfWork.Books.UpdateAsync_Return(post);
                 _cache.Remove(Key);
                 _cache.Remove(Key2);
@@ -53,31 +55,26 @@ namespace BLL.Services
                 };
             }
         }
-        string Upload(IFormFile file, string path = null)
+        string Upload(IFormFile file, string path)
         {
             try
             {
 
-                var folderName = Path.Combine("wwwroot", "Image");
-
-                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
-
                 if (file.Length > 0)
                 {
-                    var fileName =  ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                    var fullPath = Path.Combine(pathToSave, fileName);
-                    var dbPath = Path.Combine(folderName, fileName);
-                    //check if the file is already exists delete it
-                    if (!string.IsNullOrEmpty(path))
-                    {
-                        if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), path)))
-                            File.Delete(Path.Combine(Directory.GetCurrentDirectory(), path));
-                    }
-                    using (var stream = new FileStream(fullPath, FileMode.Create))
-                    {
-                        file.CopyTo(stream);
-                    }
-                    return fileName;
+                    string BinaryPath = Guid.NewGuid().ToString() + file.FileName;
+
+                    FileStream fs = new FileStream(
+                      Path.Combine(Directory.GetCurrentDirectory(),
+                      "wwwroot", "Image", BinaryPath)
+                      , FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                    FileInfo delete = new FileInfo(Path.Combine(Directory.GetCurrentDirectory(),
+                      "wwwroot", "Image", path));
+                    file.CopyTo(fs);
+                    delete.Delete();
+                    fs.Position = 0;
+                    fs.Close();
+                    return BinaryPath;
                 }
                 else
                 {

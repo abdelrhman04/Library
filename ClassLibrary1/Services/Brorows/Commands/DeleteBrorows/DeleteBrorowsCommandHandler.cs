@@ -23,7 +23,7 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-BrorowsAll";
-                var DeleteItem = await uow.Brorows.GetByIdAsync(x => x.Id == request.Id);
+                var DeleteItem = await uow.Brorows.GetByIdAsync(x => x.Id == request.Id && x.StudentId==request.student_id);
                 if (DeleteItem == null)
                 {
                     return new APIResponse

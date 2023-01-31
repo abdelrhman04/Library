@@ -13,7 +13,7 @@ namespace CORE.DAL
             
                 get
                 {
-                  return FilePaths.Book+Image;
+                  return FilePaths.Book + Image;
                 }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BLL.Specifications;
+using CORE.DAL;
 using CORE.DTO.Authors;
 using MediatR;
 using Microsoft.Extensions.Caching.Memory;
@@ -53,7 +54,7 @@ namespace BLL.Services
         }
         public async Task<AuthorOutput> GetID(GetByIdAuthorsQuery request)
         {
-            AuthorSpecification Author = new AuthorSpecification(request.Id);
+            AuthorSpecification<Authors> Author = new AuthorSpecification<Authors>(request.Id);
 
             var allPosts = await _uow.Authors.GetByIdAsync(Author);
            return _mapper.Map<AuthorOutput>(allPosts);

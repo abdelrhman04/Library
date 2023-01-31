@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BLL.Services
 {
@@ -58,26 +59,20 @@ namespace BLL.Services
             try
             {
 
-               var folderName = Path.Combine("wwwroot", "Image");
-
-                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
 
                 if (file.Length > 0)
                 {
-                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                    var fullPath = Path.Combine(pathToSave, fileName);
-                    var dbPath = Path.Combine(folderName, fileName);
-                    //check if the file is already exists delete it
-                    if (!string.IsNullOrEmpty(path))
-                    {
-                        if (File.Exists(Path.Combine(Directory.GetCurrentDirectory(), path)))
-                            File.Delete(Path.Combine(Directory.GetCurrentDirectory(), path));
-                    }
-                    using (var stream = new FileStream(fullPath, FileMode.Create))
-                    {
-                        file.CopyTo(stream);
-                    }
-                    return fileName;
+
+                    string BinaryPath = Guid.NewGuid().ToString() + file.FileName;
+
+                    FileStream fs = new FileStream(
+                      Path.Combine(Directory.GetCurrentDirectory(),
+                      "wwwroot", "Image", BinaryPath)
+                      , FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                    file.CopyTo(fs);
+                    fs.Position = 0;
+                    fs.Close();
+                    return BinaryPath;
                 }
                 else
                 {

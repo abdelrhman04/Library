@@ -18,7 +18,6 @@ namespace CORE.DTO
         public int PageCount { get; set; }
         [Required]
         public IFormFile Image_file { get; set; }
-      
         public Point Point { get; set; }
         [Required]
         public int? authorid { get; set; }

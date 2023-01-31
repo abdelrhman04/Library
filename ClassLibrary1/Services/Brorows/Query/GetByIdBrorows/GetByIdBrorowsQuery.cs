@@ -10,5 +10,6 @@ namespace BLL.Services
     public class GetByIdBrorowsQuery : IRequest<APIResponse>
     {
         public int Id { get; set; }
+        public string student_id { get; set; }
     }
 }

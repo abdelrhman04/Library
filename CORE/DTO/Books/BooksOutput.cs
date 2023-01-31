@@ -11,6 +11,7 @@ namespace CORE.DTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Image { get; set; }
         public int PageCount { get; set; }
         public string Image_Path { get; set; }
         public Point Point { get; set; }

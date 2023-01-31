@@ -37,15 +37,15 @@ namespace Library_CQRS_S_C_U_M_DesignPattern.Controllers
             return Ok(dtos);
         }
         [HttpGet("GetBrorows", Name = "GetBrorows")]
-        public async Task<ActionResult<APIResponse>> Get(int Id)
+        public async Task<ActionResult<APIResponse>> Get(int Id ,string student_id)
         {
-            var dtos = await _mediator.Send(new GetByIdBrorowsQuery() { Id = Id });
+            var dtos = await _mediator.Send(new GetByIdBrorowsQuery() { Id = Id,student_id=student_id });
             return Ok(dtos);
         }
         [HttpDelete("DeleteBrorows", Name = "DeleteBrorows")]
-        public async Task<ActionResult<APIResponse>> Delete(int Id)
+        public async Task<ActionResult<APIResponse>> Delete(int Id, string student_id)
         {
-            var dtos = await _mediator.Send(new DeleteBrorowsCommand() { Id = Id });
+            var dtos = await _mediator.Send(new DeleteBrorowsCommand() { Id = Id, student_id = student_id });
             return Ok(dtos);
         }
     }

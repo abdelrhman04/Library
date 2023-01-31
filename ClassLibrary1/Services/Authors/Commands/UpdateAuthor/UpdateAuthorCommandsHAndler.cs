@@ -29,7 +29,7 @@ namespace BLL.Services
             {
                 string Key = $"member-AuthorAll";
                 string Key2 = $"member-{request.Author.Id}";
-                Authors post = mapper.Map<Authors>(request.Author);
+                Authors post =  mapper.Map<Authors>(request.Author) ; 
                 post = await unitOfWork.Authors.UpdateAsync_Return(post);
                 _cache.Remove(Key2);
                 _cache.Remove(Key);

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace BLL.Services
             {
                 string Key = $"member - allBookAll"; 
                 var DeleteItem = await uow.Books.GetByIdAsync(x => x.Id == request.Id);
+
                 if (DeleteItem == null)
                 {
                     return new APIResponse
@@ -32,6 +34,7 @@ namespace BLL.Services
                         Message = "Element Not Found"
                     };
                 }
+                Upload(DeleteItem.Image);
                 await uow.Books.DeleteAsync(DeleteItem);
                 _cache.Remove(Key);
                 return new APIResponse
@@ -48,6 +51,21 @@ namespace BLL.Services
                     IsError = true,
                     Message = ex.Message,
                 };
+            }
+        }
+        void Upload( string path)
+        {
+            try
+            {
+                    string BinaryPath = Guid.NewGuid().ToString() + path;
+                    FileInfo delete = new FileInfo(Path.Combine(Directory.GetCurrentDirectory(),
+                      "wwwroot", "Image", path));
+                    delete.Delete();
+            }
+            catch (Exception ex)
+            {
+                throw;
+                // StatusCode(500, $"Internal server error: {ex}");
             }
         }
     }

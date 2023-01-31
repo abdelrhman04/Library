@@ -84,7 +84,7 @@ namespace BLL
         public async Task<TEntity> GetByIdAsync(Expression<Func<TEntity, bool>> value=null)
         {
             
-                return await  _context.Set<TEntity>().FirstOrDefaultAsync(value);
+                return await  _context.Set<TEntity>().AsNoTracking().FirstOrDefaultAsync(value);
         }
     }
 }

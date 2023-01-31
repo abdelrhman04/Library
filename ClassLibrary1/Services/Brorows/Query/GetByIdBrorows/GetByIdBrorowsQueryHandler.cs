@@ -54,7 +54,7 @@ namespace BLL.Services
         }
         public async Task<BrorowsOutput> GetID(GetByIdBrorowsQuery request)
         {
-            BrorowSpecification Author = new BrorowSpecification(request.Id);
+            BrorowSpecification Author = new BrorowSpecification(request.Id,request.student_id);
 
             var allPosts = await _uow.Brorows.GetByIdAsync(Author);
             return _mapper.Map<BrorowsOutput>(allPosts);
