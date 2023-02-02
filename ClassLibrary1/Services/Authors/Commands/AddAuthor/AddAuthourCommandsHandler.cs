@@ -29,7 +29,7 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-AuthorAll";
-                Authors post = mapper.Map<Authors>(request.Author);
+                Authors post = mapper.Map<Authors>(request);
                 post = await unitOfWork.Authors.AddAsync(post);
                 _cache.Remove(Key);
                 return new APIResponse

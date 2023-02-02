@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CORE.DAL
+namespace CORE.DTO
 {
-    public class Point : BaseEntity
+    public class PointOutput
     {
+        public int Id { get; set; }
         public string Region { get; set; }
         public string Country { get; set; }
         public string City { get; set; }

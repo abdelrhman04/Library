@@ -6,11 +6,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BLL.Services
 {
     public class UpdateAuthorCommands : IRequest<APIResponse>
     {
-        public AuthorInput Author { get; set; }
+        [Required]
+        public int Id { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string SurName { get; set; }
     }
 }

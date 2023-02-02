@@ -1,10 +1,12 @@
 ﻿using CORE.DTO;
 using MediatR;
+using System.ComponentModel.DataAnnotations;
 
 namespace BLL.Services
 {
     public class AddRolesCommand : IRequest<APIResponse>
     {
-        public RolesInput Role { get; set; }
+        [Required]
+        public string Name { get; set; }
     }
 }

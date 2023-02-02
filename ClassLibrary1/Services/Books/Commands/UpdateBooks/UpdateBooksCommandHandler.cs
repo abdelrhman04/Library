@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BLL.Shared;
 using CORE.DAL;
 using CORE.DTO;
 using CORE.DTO.Authors;
@@ -30,11 +31,12 @@ namespace BLL.Services
             try
             {
                 string Key = $"member - allBookAll";
-                string Key2 = $"member-Book{request.Books.Id}";
-                var image_name = await unitOfWork.Books.GetByIdAsync(x => x.Id == request.Books.Id);
+                string Key2 = $"member-Book{request.Id}";
+                var image_name = await unitOfWork.Books.GetByIdAsync(x => x.Id == request.Id);
 
-                Books post = mapper.Map<Books>(request.Books);
-                post.Image = Upload(request.Books.Image_file,path: image_name.Image);
+                Books post = mapper.Map<Books>(request);
+                post.Image = post.Upload(request.Image_file,Enums.BooKs, image_name.Image);
+                    //Upload(request.Books.Image_file,path: image_name.Image);
                 post = await unitOfWork.Books.UpdateAsync_Return(post);
                 _cache.Remove(Key);
                 _cache.Remove(Key2);
@@ -55,37 +57,38 @@ namespace BLL.Services
                 };
             }
         }
-        string Upload(IFormFile file, string path)
-        {
-            try
-            {
+        //string Upload(IFormFile file, string path)
+        //{
+        //    try
+        //    {
 
-                if (file.Length > 0)
-                {
-                    string BinaryPath = Guid.NewGuid().ToString() + file.FileName;
+        //        if (file.Length > 0)
+        //        {
+        //            string BinaryPath = Guid.NewGuid().ToString() + file.FileName;
 
-                    FileStream fs = new FileStream(
-                      Path.Combine(Directory.GetCurrentDirectory(),
-                      "wwwroot", "Image", BinaryPath)
-                      , FileMode.OpenOrCreate, FileAccess.ReadWrite);
-                    FileInfo delete = new FileInfo(Path.Combine(Directory.GetCurrentDirectory(),
-                      "wwwroot", "Image", path));
-                    file.CopyTo(fs);
-                    delete.Delete();
-                    fs.Position = 0;
-                    fs.Close();
-                    return BinaryPath;
-                }
-                else
-                {
-                    return "error";
-                }
-            }
-            catch (Exception ex)
-            {
-                throw;
-                // StatusCode(500, $"Internal server error: {ex}");
-            }
-        }
+        //            FileStream fs = new FileStream(
+        //              Path.Combine(Directory.GetCurrentDirectory(),
+        //              "wwwroot", "Image", BinaryPath)
+        //              , FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        //            FileInfo delete = new FileInfo(Path.Combine(Directory.GetCurrentDirectory(),
+        //              "wwwroot", "Image", path));
+
+        //            file.CopyTo(fs);
+        //            delete.Delete();
+        //            fs.Position = 0;
+        //            fs.Close();
+        //            return BinaryPath;
+        //        }
+        //        else
+        //        {
+        //            return "error";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw;
+        //        // StatusCode(500, $"Internal server error: {ex}");
+        //    }
+        //}
     }
 }

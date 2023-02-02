@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoMapper.Execution;
 using BLL.Specifications;
+using CORE.DAL;
 using CORE.DTO;
 using CORE.DTO.Authors;
 using MediatR;
@@ -8,6 +9,7 @@ using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -54,7 +56,7 @@ namespace BLL.Services
         }
         public async Task<List<BooksOutput>> GetAll(GetAllBooksQuery request)
         {
-            BookSpecification Author = new BookSpecification();
+            BookSpecification<Books> Author = new BookSpecification<Books>(null, null,x=>x.Point);
 
             var allPosts = await uow.Books.GetAllAsync(Author);
             return _mapper.Map<List<BooksOutput>>(allPosts);

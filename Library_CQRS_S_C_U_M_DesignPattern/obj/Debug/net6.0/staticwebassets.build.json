@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "M8z28euJiM+SPQ5XA2uJIWf6iEKYs7JPWktN7eAaCG4=",
+  "Hash": "4SWJu6i1FR/rbpNBe3zeCnOKn83N6n3pAYPJneb0RQI=",
   "Source": "Library_CQRS_S_C_U_M_DesignPattern",
   "BasePath": "_content/Library_CQRS_S_C_U_M_DesignPattern",
   "Mode": "Default",
@@ -119,23 +119,6 @@
       "OriginalItemSpec": "wwwroot\\Image\\4aa972b7-2780-40ec-9bd7-91803967d5941673576127630.jpg"
     },
     {
-      "Identity": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\Image\\65ed705c-8f96-4798-b4bb-e794ca7a3fc61673576127630.jpg",
-      "SourceId": "Library_CQRS_S_C_U_M_DesignPattern",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\",
-      "BasePath": "_content/Library_CQRS_S_C_U_M_DesignPattern",
-      "RelativePath": "Image/65ed705c-8f96-4798-b4bb-e794ca7a3fc61673576127630.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Image\\65ed705c-8f96-4798-b4bb-e794ca7a3fc61673576127630.jpg"
-    },
-    {
       "Identity": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\Image\\6b8b48ef-c5e9-445a-b224-d39379bec4241674252881531.jpg",
       "SourceId": "Library_CQRS_S_C_U_M_DesignPattern",
       "SourceType": "Discovered",
@@ -168,6 +151,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\8ab3ec44-506e-46c7-bdde-5183e8e3ca89326571144_1643327872771700_2023648356276334840_n.jpg"
+    },
+    {
+      "Identity": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\Image\\BooKs\\186acc21-4ddd-418e-80f9-8ffdac08f7ff1673576127630.jpg",
+      "SourceId": "Library_CQRS_S_C_U_M_DesignPattern",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\",
+      "BasePath": "_content/Library_CQRS_S_C_U_M_DesignPattern",
+      "RelativePath": "Image/BooKs/186acc21-4ddd-418e-80f9-8ffdac08f7ff1673576127630.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\BooKs\\186acc21-4ddd-418e-80f9-8ffdac08f7ff1673576127630.jpg"
+    },
+    {
+      "Identity": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\Image\\BooKs\\47b80185-a420-4eb3-9088-3e0cd2c8b33d1674278989282.jpg",
+      "SourceId": "Library_CQRS_S_C_U_M_DesignPattern",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\",
+      "BasePath": "_content/Library_CQRS_S_C_U_M_DesignPattern",
+      "RelativePath": "Image/BooKs/47b80185-a420-4eb3-9088-3e0cd2c8b33d1674278989282.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\BooKs\\47b80185-a420-4eb3-9088-3e0cd2c8b33d1674278989282.jpg"
     },
     {
       "Identity": "D:\\Abdo_Project_For_Tech\\ClassLibrary1\\Library_CQRS_S_C_U_M_DesignPattern\\wwwroot\\Image\\c0d8972c-6c81-4780-9f08-5c005acba5f71674252881531.jpg",

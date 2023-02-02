@@ -29,9 +29,9 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-RoleAll";
-                string Key2 = $"member-Role{request.Role.Id}";
-                IdentityRole post = await unitOfWork.IdentityRole.GetByIdAsync(x=>x.Id== request.Role.Id);
-                post.Name = request.Role.Name;
+                string Key2 = $"member-Role{request.Id}";
+                IdentityRole post = await unitOfWork.IdentityRole.GetByIdAsync(x=>x.Id== request.Id);
+                post.Name = request.Name;
                 post = await unitOfWork.IdentityRole.UpdateAsync_Return(post);
                 _cache.Remove(Key2);
                 _cache.Remove(Key);

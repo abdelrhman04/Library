@@ -21,16 +21,16 @@ namespace Library_CQRS_S_C_U_M_DesignPattern.Controllers
         //[HttpPost, DisableRequestSizeLimit]
         [Consumes("multipart/form-data")]
         [HttpPost("AddBook", Name = "AddBook")]
-        public async Task<ActionResult<APIResponse>> Add([FromForm] BooksInput Book)
+        public async Task<ActionResult<APIResponse>> Add([FromForm] AddBooksCommand Book)
         {
-            var dtos = await _mediator.Send(new AddBooksCommand() { Book = Book });
+            var dtos = await _mediator.Send(Book);
             return Ok(dtos);
         }
         [Consumes("multipart/form-data")]
         [HttpPost("updateBook", Name = "updateBook")]
-        public async Task<ActionResult<APIResponse>> Update_Type([FromForm] BooksInput _Type)
+        public async Task<ActionResult<APIResponse>> Update_Type([FromForm] UpdateBooksCommand _Type)
         {
-            var dtos = await _mediator.Send(new UpdateBooksCommand() { Books = _Type });
+            var dtos = await _mediator.Send(_Type);
             return Ok(dtos);
 
         }

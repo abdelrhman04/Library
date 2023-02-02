@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +14,6 @@ namespace CORE
     {
         public static void MappRelationships(this ModelBuilder builder)
         {
-            
             builder.Entity<Brorows>().
                    HasOne(i => i.Student)
                    .WithMany(i => i.Brorows)

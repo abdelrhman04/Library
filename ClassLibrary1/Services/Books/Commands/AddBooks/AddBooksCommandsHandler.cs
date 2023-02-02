@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BLL.Shared;
 using CORE.DAL;
 using CORE.DTO;
 using CORE.DTO.Authors;
@@ -32,8 +33,9 @@ namespace BLL.Services
             try
             {
                 string Key = $"member - allBookAll";
-                Books post = mapper.Map<Books>(request.Book);
-                post.Image = Upload(request.Book.Image_file);
+                Books post = mapper.Map<Books>(request);
+                post.Image = post.Upload(request.Image_file, Enums.BooKs,null);
+                    //Upload(request.Book.Image_file);
                 post = await unitOfWork.Books.AddAsync(post);
                 _cache.Remove(Key);
                 return new APIResponse
@@ -54,36 +56,36 @@ namespace BLL.Services
             }
 
         }
-        string Upload(IFormFile file,  string path = null)
-        {
-            try
-            {
+        //string Upload(IFormFile file,  string path = null)
+        //{
+        //    try
+        //    {
 
 
-                if (file.Length > 0)
-                {
+        //        if (file.Length > 0)
+        //        {
 
-                    string BinaryPath = Guid.NewGuid().ToString() + file.FileName;
+        //            string BinaryPath = Guid.NewGuid().ToString() + file.FileName;
 
-                    FileStream fs = new FileStream(
-                      Path.Combine(Directory.GetCurrentDirectory(),
-                      "wwwroot", "Image", BinaryPath)
-                      , FileMode.OpenOrCreate, FileAccess.ReadWrite);
-                    file.CopyTo(fs);
-                    fs.Position = 0;
-                    fs.Close();
-                    return BinaryPath;
-                }
-                else
-                {
-                    return "error";
-                }
-            }
-            catch (Exception ex)
-            {
-                throw;
-                // StatusCode(500, $"Internal server error: {ex}");
-            }
-        }
+        //            FileStream fs = new FileStream(
+        //              Path.Combine(Directory.GetCurrentDirectory(),
+        //              "wwwroot", "Image", BinaryPath)
+        //              , FileMode.OpenOrCreate, FileAccess.ReadWrite);
+        //            file.CopyTo(fs);
+        //            fs.Position = 0;
+        //            fs.Close();
+        //            return BinaryPath;
+        //        }
+        //        else
+        //        {
+        //            return "error";
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw;
+        //        // StatusCode(500, $"Internal server error: {ex}");
+        //    }
+        //}
     }
 }

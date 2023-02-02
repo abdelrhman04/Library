@@ -29,8 +29,8 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-allTypesAll";
-                string Key2 = $"member-Type{request.Type.id}";
-                Types post = mapper.Map<Types>(request.Type);
+                string Key2 = $"member-Type{request.id}";
+                Types post = mapper.Map<Types>(request);
                 post = await unitOfWork.Types.UpdateAsync_Return(post);
                 _cache.Remove(Key);
                 _cache.Remove(Key2);

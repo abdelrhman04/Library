@@ -3,6 +3,7 @@ using CORE.DTO.Authors;
 using MediatR;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,9 @@ namespace BLL.Services
 {
     public class AddAuthourCommands: IRequest<APIResponse>
     {
-        public AuthorInput Author { get; set; }
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string SurName { get; set; }
     }
 }

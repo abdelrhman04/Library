@@ -9,6 +9,6 @@ namespace CORE.Constants
     {
         public static string BaseUrl => "https://localhost:44388/wwwroot/";
         //public static string BaseUrl => "https://app.mohandisy.com/";
-        public static string Book => BaseUrl + "Image/";
+        public static string Book => BaseUrl + "Image/Books/";
     }
 }

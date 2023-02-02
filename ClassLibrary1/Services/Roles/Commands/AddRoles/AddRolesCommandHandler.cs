@@ -31,7 +31,7 @@ namespace BLL.Services
             {
                 string Key = $"member-RoleAll";
                 IdentityRole post=new IdentityRole();
-                post.Name = request.Role.Name;
+                post.Name = request.Name;
                 post = await unitOfWork.IdentityRole.AddAsync(post);
                 _cache.Remove(Key);
                 return new APIResponse

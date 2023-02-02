@@ -31,7 +31,7 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-StudentAll";
-                var userExists = await userManager.FindByEmailAsync(request.Students.Email);
+                var userExists = await userManager.FindByEmailAsync(request.Email);
                 if (userExists != null)
                     return new APIResponse
                     {
@@ -42,23 +42,23 @@ namespace BLL.Services
                 var token = Guid.NewGuid().ToString();
                 Point point = new Point
                 {
-                    Region= request.Students.point.Region,
-                    City= request.Students.point.City,
-                    Country= request.Students.point.Country,
+                    Region= request.point.Region,
+                    City= request.point.City,
+                    Country= request.point.Country,
                 };
                 Students user =new Students
                 {
-                    Name = request.Students.Name,
-                    SurName=request.Students.SurName,
-                    UserName=request.Students.Username,
-                    Email= request.Students.Email,
-                    gender = request.Students.gender,
-                    Class= request.Students.Class,
-                    BirthDate= request.Students.BirthDate,
+                    Name = request.Name,
+                    SurName=request.SurName,
+                    UserName=request.Username,
+                    Email= request.Email,
+                    gender = request.gender,
+                    Class= request.Class,
+                    BirthDate= request.BirthDate,
                     point= point,
                     EmailVerifyToken= token
                 };
-                var result = await userManager.CreateAsync(user, request.Students.Password);
+                var result = await userManager.CreateAsync(user, request.Password);
                 if (!result.Succeeded)
                     return new APIResponse
                     {

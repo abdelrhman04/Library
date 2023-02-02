@@ -20,23 +20,23 @@ namespace Library_CQRS_S_C_U_M_DesignPattern.Controllers
         }
 
         [HttpDelete("DeleteStudnt", Name = "DeleteStudnt")]
-        public async Task<ActionResult<APIResponse>> StudntDelete(string Id)
+        public async Task<ActionResult<APIResponse>> StudntDelete(DeleteStudentsCommand Id)
         {
-            var dtos = await _mediator.Send(new DeleteStudentsCommand() { Id = Id });
+            var dtos = await _mediator.Send(Id);
             return Ok(dtos);
         }
 
 
         [HttpPost("RegistrerStudnt", Name = "RegistrerStudnt")]
-        public async Task<ActionResult<APIResponse>> Registrer(StudentsInput student)
+        public async Task<ActionResult<APIResponse>> Registrer(RegisterCommand student)
         {
-            var dtos = await _mediator.Send(new RegisterCommand() { Students = student });
+            var dtos = await _mediator.Send(student);
             return Ok(dtos);
         }
         [HttpPost("UpdateStudnt", Name = "UpdateStudnt")]
-        public async Task<ActionResult<APIResponse>> Update(StudentsInput student)
+        public async Task<ActionResult<APIResponse>> Update(UpdateStudentsCommand student)
         {
-            var dtos = await _mediator.Send(new UpdateStudentsCommand() { Students = student });
+            var dtos = await _mediator.Send(student);
             return Ok(dtos);
         }
         [HttpPost("ChangePassword", Name = "ChangePassword")]
@@ -53,15 +53,15 @@ namespace Library_CQRS_S_C_U_M_DesignPattern.Controllers
             return Ok(dtos);
         }
         [HttpGet("GetStudnt", Name = "GetStudnt")]
-        public async Task<ActionResult<APIResponse>> Get(string id)
+        public async Task<ActionResult<APIResponse>> Get(GetByIdStudentsQuery id)
         {
-            var dtos = await _mediator.Send(new GetByIdStudentsQuery() { Id = id });
+            var dtos = await _mediator.Send(id);
             return Ok(dtos);
         }
         [HttpPost("Login", Name = "Login")]
-        public async Task<ActionResult<APIResponse>> Login(string Email,string password)
+        public async Task<ActionResult<APIResponse>> Login(LoginQuery confirm)
         {
-            var dtos = await _mediator.Send(new LoginQuery() { Email=Email,Password=password});
+            var dtos = await _mediator.Send(confirm);
             return Ok(dtos);
         }
         [HttpGet("LogOut", Name = "LogOut")]
@@ -71,20 +71,15 @@ namespace Library_CQRS_S_C_U_M_DesignPattern.Controllers
             return Ok(dtos);
         }
         [HttpPost("ConfirmEmail", Name = "ConfirmEmail")]
-        public async Task<ActionResult<APIResponse>> ConfirmEmail( string token,string id)
+        public async Task<ActionResult<APIResponse>> ConfirmEmail(ConfirmEmailQuery confirm)
         {
-            var dtos = await _mediator.Send(new ConfirmEmailQuery() { token=token,
-                                                                                Id=id});
+            var dtos = await _mediator.Send(confirm);
             return Ok(dtos);
         }
         [HttpPost("ResetPassword", Name = "ResetPassword")]
-        public async Task<ActionResult<APIResponse>> ResetPassword(string token, string id)
+        public async Task<ActionResult<APIResponse>> ResetPassword(ResetPasswordQuery confirm)
         {
-            var dtos = await _mediator.Send(new ResetPasswordQuery()
-            {
-                token = token,
-                Id = id
-            });
+            var dtos = await _mediator.Send(confirm);
             return Ok(dtos);
         }
     }

@@ -28,8 +28,8 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-BrorowsAll";
-                string Key2 = $"member-Brorows-{request.Brorow.Id}";
-                Brorows post = mapper.Map<Brorows>(request.Brorow);
+                string Key2 = $"member-Brorows-{request.Id}";
+                Brorows post = mapper.Map<Brorows>(request);
                 post = await unitOfWork.Brorows.UpdateAsync_Return(post);
                 _cache.Remove(Key2);
                 _cache.Remove(Key);

@@ -19,15 +19,15 @@ namespace Library_CQRS_S_C_U_M_DesignPattern.Controllers
             _mediator = mediator;
         }
         [HttpPost("AddAuthors", Name = "AddAuthors")]
-        public async Task<ActionResult<APIResponse>> Add(AuthorInput Author)
+        public async Task<ActionResult<APIResponse>> Add(AddAuthourCommands Author)
         {
-            var dtos = await _mediator.Send(new AddAuthourCommands(){ Author= Author});
+            var dtos = await _mediator.Send(Author);
             return Ok(dtos);
         }
         [HttpPost("UpdateAuthors", Name = "Update")]
-        public async Task<ActionResult<APIResponse>> Update(AuthorInput Author)
+        public async Task<ActionResult<APIResponse>> Update(UpdateAuthorCommands Author)
         {
-            var dtos = await _mediator.Send(new UpdateAuthorCommands() { Author = Author });
+            var dtos = await _mediator.Send(Author);
             return Ok(dtos);
         }
         [HttpGet("GetAll", Name = "GetAll")]

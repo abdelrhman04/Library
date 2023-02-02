@@ -1,7 +1,10 @@
-﻿using CORE.DTO;
+﻿using CORE.DAL;
+using CORE.DTO;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +13,18 @@ namespace BLL.Services
 {
     public class UpdateBooksCommand : IRequest<APIResponse>
     {
-        public BooksInput Books { get; set; }
+        [Required]
+        public int? Id { get; set; } = 0;
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public int PageCount { get; set; }
+        [Required]
+        public IFormFile Image_file { get; set; }
+        public Point Point { get; set; }
+        [Required]
+        public int? authorid { get; set; }
+        [Required]
+        public int typeid { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace BLL.Services
             {
                 string Key = $"member-allTypesAll";
 
-                Types post = mapper.Map<Types>(request.Type);
+                Types post = mapper.Map<Types>(request);
                 post = await unitOfWork.Types.AddAsync(post);
                 _cache.Remove(Key);
                 return new APIResponse

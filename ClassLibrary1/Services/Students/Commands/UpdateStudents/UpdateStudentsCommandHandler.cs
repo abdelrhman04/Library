@@ -31,8 +31,8 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-StudentAll";
-                string Key2 = $"member-Student-{request.Students.Id}";
-                Students student = await unitOfWork.Students.GetByIdAsync(x=>x.Id== request.Students.Id&& x.UserName== request.Students.Username);
+                string Key2 = $"member-Student-{request.Id}";
+                Students student = await unitOfWork.Students.GetByIdAsync(x=>x.Id== request.Id&& x.UserName== request.Username);
                 if (student != null) {
                     return new APIResponse
                     {
@@ -42,17 +42,17 @@ namespace BLL.Services
                         Data = null,
                     };
                 }
-                Students student_Update = await unitOfWork.Students.GetByIdAsync(x => x.Id == request.Students.Id );
+                Students student_Update = await unitOfWork.Students.GetByIdAsync(x => x.Id == request.Id );
                 
 
-                student_Update.UserName = request.Students.Username;
-                student_Update.Email = request.Students.Email;
-                student_Update.Name = request.Students.Name;
-                student_Update.SurName = request.Students.SurName;
-                student_Update.gender = request.Students.gender;
-                student_Update.BirthDate = request.Students.BirthDate;
-                student_Update.Class = request.Students.Class;
-                student_Update.point = request.Students.point;
+                student_Update.UserName = request.Username;
+                student_Update.Email = request.Email;
+                student_Update.Name = request.Name;
+                student_Update.SurName = request.SurName;
+                student_Update.gender = request.gender;
+                student_Update.BirthDate = request.BirthDate;
+                student_Update.Class = request.Class;
+                student_Update.point = mapper.Map<Point>(request.point);
                 //student_Update.point.Region = request.Students.point.Region;
                 //student_Update.point.City= request.Students.point.City;
                 //student_Update.point.Country = request.Students.point.Country;

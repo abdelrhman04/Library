@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BLL.Specifications;
+using CORE.DAL;
 using CORE.DTO;
 using CORE.DTO.Authors;
 using MediatR;
@@ -54,7 +55,7 @@ namespace BLL.Services
         }
         public async Task<BooksOutput> GetID(GetByIdBooksQuery request)
         {
-            BookSpecification Author = new BookSpecification(request.Id);
+            BookSpecification<Books> Author = new BookSpecification<Books>(request.Id);
 
             var allPosts = await _uow.Books.GetByIdAsync(Author);
             return _mapper.Map<BooksOutput>(allPosts);

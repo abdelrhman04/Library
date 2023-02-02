@@ -29,7 +29,7 @@ namespace BLL.Services
             try
             {
                 string Key = $"member-BrorowsAll";
-                Brorows post = mapper.Map<Brorows>(request.Brorow);
+                Brorows post = mapper.Map<Brorows>(request);
                 post = await unitOfWork.Brorows.AddAsync(post);
                 _cache.Remove(Key);
                 return new APIResponse
