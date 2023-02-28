@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL
@@ -21,14 +20,12 @@ namespace BLL
             CreateMap<Authors, UpdateAuthorCommands>().ReverseMap();
             //CreateMap<Authors, AuthorInput>().ReverseMap(); 
             CreateMap<AuthorOutput, Authors>().ReverseMap();
-            
             CreateMap<Books, AddBooksCommand>().ReverseMap(); 
             CreateMap<Books, UpdateBooksCommand>().ReverseMap();
             //CreateMap<Books, BooksInput>().ReverseMap();
             CreateMap<BooksOutput, Books>().ReverseMap();
             CreateMap<PointOutput, Point>().ReverseMap();
             CreateMap<PointInput, Point>().ReverseMap();
-
            // CreateMap<Types, TypesInput>().ReverseMap();
             CreateMap<Types, UpdateTypesCommand>().ReverseMap();
             CreateMap<Types, AddTypesCommand>().ReverseMap();

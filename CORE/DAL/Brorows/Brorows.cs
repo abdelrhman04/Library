@@ -13,5 +13,9 @@ namespace CORE.DAL
         public DateTime BroughDate { get; set; }
         public Books Book { get; set; }
         public Students Student { get; set; }
+        public  object Output()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

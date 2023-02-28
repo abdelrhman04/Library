@@ -23,6 +23,10 @@ namespace CORE.DAL
         public Class Class { get; set; }
         public Point point { get; set; }
         public ICollection<Brorows> Brorows { get; set; }
+        public  object Output()
+        {
+            throw new NotImplementedException();
+        }
 
 
     }

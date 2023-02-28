@@ -5,6 +5,7 @@ using CORE.DTO.Authors;
 using MediatR;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Hosting;
+using System.Collections.ObjectModel;
 
 namespace BLL.Services
 {
@@ -28,7 +29,7 @@ namespace BLL.Services
                 var Result = await _cache.GetOrCreateAsync(Key, entry => {
                 entry.SetAbsoluteExpiration(
                     TimeSpan.FromMinutes(2));
-                return this.GetAll(request);
+                    return this.GetAll(request);
                  });
                 return new APIResponse
                 {
@@ -47,12 +48,15 @@ namespace BLL.Services
                 };
             }
         }
-        public async Task<List<AuthorOutput>> GetAll(GetAllAuthorsQuery request)
+        public async Task<IEnumerable<Object>> GetAll(GetAllAuthorsQuery request)
         {
-            AuthorSpecification<Authors> Author = new AuthorSpecification<Authors>(null, x => x.SurName, x=>x.Books);
-
-            var allPosts = await uow.Authors.GetAllAsync(Author);
-            return _mapper.Map < List<AuthorOutput>>(allPosts);
+            return (await uow.Authors.GetAllAsync(new AuthorSpecification<Authors>(null, x => x.SurName, x => x.Books))).Select(x=>x.Output());
+                
+                
+             
+            
+            //return _mapper.Map<IEnumerable<AuthorOutput>>((await uow.Authors.GetAllAsync(new AuthorSpecification<Authors>(null, x => x.SurName, x => x.Books))));
+                
         }
     }
 }

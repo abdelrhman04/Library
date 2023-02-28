@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CORE.DAL
 {
-    public class BaseEntity
+    public  class BaseEntity
     {
         public int Id { get; set; }
+        
+        //public abstract Object Output();
     }
 }

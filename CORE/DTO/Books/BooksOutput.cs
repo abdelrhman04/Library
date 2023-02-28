@@ -17,5 +17,6 @@ namespace CORE.DTO
         public Point Point { get; set; }
         public int? authorid { get; set; }
         public int typeid { get; set; }
+
     }
 }

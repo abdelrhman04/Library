@@ -19,6 +19,7 @@ builder.Services.AddDbContext<MyContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddIdentity<Students, IdentityRole>().AddEntityFrameworkStores<MyContext>();
+
 builder.Services.Configure<IdentityOptions>(option =>
 {
     option.Password.RequireDigit = false;

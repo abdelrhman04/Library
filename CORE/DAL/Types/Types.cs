@@ -10,5 +10,9 @@ namespace CORE.DAL
     {
         public string Name { get; set; }
         public ICollection<Books> Books { get; set; }
+        public object Output()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

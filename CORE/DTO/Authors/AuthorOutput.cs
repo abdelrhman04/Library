@@ -13,6 +13,6 @@ namespace CORE.DTO.Authors
         public int Id { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }
-        public ICollection<BooksOutput> Books { get; set; }
+        public IEnumerable<BooksOutput> Books { get; set; }
     }
 }
