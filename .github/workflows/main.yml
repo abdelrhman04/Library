@@ -2,9 +2,9 @@ name: CI + CD
 
 on:
   push:
-    branches: [ main ]
+    branches: [ abdo ]
   pull_request:
-    branches: [ main ]
+    branches: [ abdo ]
   workflow_dispatch:
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
     
   DeployDev:
     name: Deploy to Dev 
-#     if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request'
     needs: [Build]
     runs-on: ubuntu-latest
     environment: 
@@ -30,7 +30,7 @@ jobs:
     
   DeployStaging:
     name: Deploy to Staging 
-#     if: github.event.ref == 'refs/heads/main'
+    if: github.event.ref == 'refs/heads/abdo'
     needs: [Build]
     runs-on: ubuntu-latest
     environment: 
